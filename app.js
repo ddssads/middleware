@@ -10,7 +10,7 @@ app.use(function (req, res, next) {
     const totalTime = resTime - reqTime
     console.log(`reqtime: ${reqTime.toLocaleString()} || restime: ${resTime.toLocaleString()} ${req.method} from ${req.url} total time:${totalTime}ms`)
   })
-  return next()
+  next()
 })
 
 app.get('/', (req, res) => {
